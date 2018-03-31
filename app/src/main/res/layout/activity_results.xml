@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.quizapp.ResultsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:layout_margin="16dp"
+            android:text="@string/result"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="64sp"
+            android:paddingBottom="16dp"
+            android:text="0"/>
+
+        <!-- Question One -->
+        <LinearLayout
+            android:id="@+id/answerOneDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionOne"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/boroughs" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="15dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/fiveBoroughs"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Question Two -->
+        <LinearLayout
+            android:id="@+id/answerTwoDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionTwo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bronx"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="15dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/bronxAnswer"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Question Three -->
+        <LinearLayout
+            android:id="@+id/answerThreeDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:fontFamily="@font/limelight"
+                android:background="#fafafa"
+                android:text="@string/questionThree"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#fafafa">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp">
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:text="@string/subway" />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:text="@string/aerialTram" />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:text="@string/maglev" />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:text="@string/bus" />
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:text="@string/ferry" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#fafafa"
+                    android:lineSpacingExtra="15dp"
+                    android:paddingRight="12dp"
+                    android:text="@string/transportation" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Question Four -->
+        <LinearLayout
+            android:id="@+id/answerFourDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionFour"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:paddingBottom="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/subwaylinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <CheckBox
+                        android:checked="true"
+                        android:clickable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:text="G" />
+
+                    <CheckBox
+                        android:checked="false"
+                        android:clickable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:text="H" />
+
+                    <CheckBox
+                        android:checked="false"
+                        android:clickable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:text="V" />
+
+                    <CheckBox
+                        android:checked="true"
+                        android:clickable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:text="Z" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="138dp"
+                    android:layout_height="165dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@+id/subwaylinearLayout"
+                    android:layout_toRightOf="@+id/subwaylinearLayout"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/subway"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Question Five -->
+        <LinearLayout
+            android:id="@+id/answerFiveDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionFive"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/walmart"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="15dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/walmartAnswer"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Question Six -->
+        <LinearLayout
+            android:id="@+id/answerSixDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionSix"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:padding="16dp"
+                android:lineSpacingExtra="15dp"
+                android:text="@string/lifeFormAnswer"/>
+        </LinearLayout>
+
+        <!-- Question Seven -->
+        <LinearLayout
+            android:id="@+id/answerSevenDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionSeven"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:padding="16dp"
+                android:lineSpacingExtra="15dp"
+                android:text="@string/treeAnswer"/>
+        </LinearLayout>
+
+        <!-- Question Eight -->
+        <LinearLayout
+            android:id="@+id/answerEightDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="#fafafa"
+                android:fontFamily="@font/limelight"
+                android:text="@string/questionEight"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:padding="16dp"
+                android:lineSpacingExtra="15dp"
+                android:text="@string/languageAnswer"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="restartQuiz"
+            android:text="Replay"/>
+    </LinearLayout>
+</ScrollView>

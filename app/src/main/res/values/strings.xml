@@ -1,0 +1,30 @@
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">QuizApp</string>
+
+    <string name="Intro">How well do you know NYC?</string>
+    <string name="questionOne">1. How many boroughs are there in NYC?</string>
+    <string name="questionTwo">2. Which borough is not located on an island?</string>
+    <string name="questionThree">3. Which of the following are modes of public transportation in the city?</string>
+    <string name="questionFour">4. Which of the following lines are still in operation?</string>
+    <string name="questionFive">5. Which store will you not find in NYC?</string>
+    <string name="questionSix">6. There have been 15,152 life forms identified on the NYC subway.</string>
+    <string name="questionSeven">7. Homeowners can request that a tree be planted outside their homes for free in NYC.</string>
+    <string name="questionEight">8. Approximately 500 languages are spoken in NYC.</string>
+
+    <string name="result">Your Score: </string>
+    <string name="fiveBoroughs">There are five boroughs in New York City: The Bronx, Brooklyn, Manhattan, Queens and Staten Island.</string>
+    <string name="bronxAnswer">The Bronx is the only borough not located on an island.</string>
+    <string name="transportation">New York City has many modes of transportation. However, it does not have any maglev trains.</string>
+    <string name="walmartAnswer">There are many large retail store in NYC, however there are no Walmart stores. </string>
+    <string name="lifeFormAnswer">There are over 15000 types of microscopic life forms found on the NYC subway!</string>
+    <string name="treeAnswer">A request can be submitted to the Department of Parks and Recreation or by calling 311 to plant a tree on the street in front of your home.</string>
+    <string name="languageAnswer">There are over 800 different languages spoken in NYC!</string>
+
+    <string name="subway">Subway</string>
+    <string name="aerialTram">Aerial Tram</string>
+    <string name="maglev">Maglev Trains</string>
+    <string name="bus">Bus</string>
+    <string name="ferry">Ferry</string>
+
+</resources>
