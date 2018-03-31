@@ -47,41 +47,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateScore(){
-        totalScore += getQuestionOneScore();
-        totalScore += getQuestionTwoScore();
-        totalScore += getQuestionThreeScore();
-        totalScore += getQuestionFourScore();
-        totalScore += getQuestionFiveScore();
-        totalScore += getQuestionSixScore();
-        totalScore += getQuestionSevenScore();
-        totalScore += getQuestionEightScore();
+        getQuestionOneScore();
+        getQuestionTwoScore();
+        getQuestionThreeScore();
+        getQuestionFourScore();
+        getQuestionFiveScore();
+        getQuestionSixScore();
+        getQuestionSevenScore();
+        getQuestionEightScore();
     }
-    private int getQuestionOneScore(){
+    private void getQuestionOneScore(){
 
         RadioButton borough = (RadioButton)findViewById(R.id.fiveBoroughs);
         boolean correctAnswer = borough.isChecked();
         if(correctAnswer){
             qOne = true;
-            return 1;
+            totalScore += 1;
         }
         else {
             qOne = false;
-            return 0;
         }
     }
-    private int getQuestionTwoScore(){
+    private void getQuestionTwoScore(){
 
         EditText questionTwo = (EditText) findViewById(R.id.island);
         String answer = questionTwo.getText().toString().toLowerCase();
-        if(answer.equals("bronx") || answer.equals("bronx ") || answer.equals("the bronx") || answer.equals("The Bronx") || answer.equals("The Bronx ")){
+        if(answer.equals("bronx") || answer.equals("bronx ") || answer.equals("the bronx") || answer.equals("the bronx ")){
             qTwo = true;
-            return 1;
+            totalScore += 1;
         }
-        qTwo = false;
-        return 0;
+        else {
+            qTwo = false;
+        }
     }
 
-    private int getQuestionThreeScore(){
+    private void getQuestionThreeScore(){
         CheckBox optionSubway = (CheckBox) findViewById(R.id.subwayCheckBox);
         CheckBox optionTram = (CheckBox) findViewById(R.id.tramCheckBox);
         CheckBox optionMaglev = (CheckBox) findViewById(R.id.maglevCheckBox);
@@ -90,67 +90,73 @@ public class MainActivity extends AppCompatActivity {
 
         if(optionSubway.isChecked() && optionTram.isChecked() && !optionMaglev.isChecked() && optionBus.isChecked() && optionFerry.isChecked()){
             qThree = true;
-            return 1;
+            totalScore += 1;
         }
-        qThree = false;
-        return 0;
+        else {
+            qThree = false;
+        }
     }
 
-    private int getQuestionFourScore(){
+    private void getQuestionFourScore() {
         CheckBox optionG = (CheckBox) findViewById(R.id.gline);
         CheckBox optionH = (CheckBox) findViewById(R.id.hline);
         CheckBox optionV = (CheckBox) findViewById(R.id.vline);
         CheckBox optionZ = (CheckBox) findViewById(R.id.zline);
 
-        if(optionG.isChecked() && !optionH.isChecked() && !optionV.isChecked() && optionZ.isChecked()){
+        if (optionG.isChecked() && !optionH.isChecked() && !optionV.isChecked() && optionZ.isChecked()) {
             qFour = true;
-            return 1;
+            totalScore += 1;
         }
-        qFour = false;
-        return 0;
+        else{
+            qFour = false;
+        }
     }
 
-    private int getQuestionFiveScore(){
+    private void getQuestionFiveScore(){
         RadioButton store = (RadioButton)findViewById(R.id.walmart);
         boolean correctAnswer = store.isChecked();
         if(correctAnswer){
             qFive = true;
-            return 1;
+            totalScore += 1;
         }
-        qFive = false;
-        return 0;
+        else {
+            qFive = false;
+        }
     }
 
-    private int getQuestionSixScore(){
+    private void getQuestionSixScore(){
         RadioButton lifeForm = (RadioButton)findViewById(R.id.lifeFormTrue);
         boolean correctAnswer = lifeForm.isChecked();
         if(correctAnswer){
             qSix = true;
-            return 1;
+            totalScore += 1;
         }
-        qSix = false;
-        return 0;
+        else {
+            qSix = false;
+        }
     }
 
-    private int getQuestionSevenScore(){
+    private void getQuestionSevenScore(){
         RadioButton plantTree = (RadioButton)findViewById(R.id.treeTrue);
         boolean correctAnswer = plantTree.isChecked();
         if(correctAnswer){
             qSeven = true;
-            return 1;
+            totalScore += 1;
         }
-        qSeven = false;
-        return 0;
+        else {
+            qSeven = false;
+        }
     }
 
-    private int getQuestionEightScore(){
+    private void getQuestionEightScore(){
         RadioButton languageQ = (RadioButton)findViewById(R.id.langFalse);
         boolean correctAnswer = languageQ.isChecked();
         if(correctAnswer){
             qEight = true;
-            return 1;
+            totalScore += 1;
         }
-        qEight = false;
-        return 0;
+        else {
+            qEight = false;
+        }
     }
 }
